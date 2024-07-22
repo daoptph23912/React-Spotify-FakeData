@@ -2,8 +2,7 @@ import Topnav from "../component/topnav/topnav";
 import TitleM from "../component/text/title-m";
 import SearchPageCard from "../component/cards/searchpage-card";
 import { SEARCHCARDS } from "../data/index";
-
-import styles from "./search.module.css";
+import styles from "../assets/style-pages/search.module.css";
 
 function Search() {
   return (
@@ -11,7 +10,7 @@ function Search() {
       <Topnav search={true} />
 
       <div className={styles.Search}>
-        <TitleM>Hepsine goz at</TitleM>
+        <TitleM>Tìm kiếm </TitleM>
         <div className={styles.SearchCardGrid}>
           {SEARCHCARDS.map((card) => {
             return (

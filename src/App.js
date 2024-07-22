@@ -8,10 +8,8 @@ import Home from "./pages/home";
 import Search from "./pages/search";
 import Library from "./pages/library";
 import PlaylistPage from "./pages/playlist";
-
 import CONST from "./constants/index";
-import { PLAYLIST } from "./data/index";
-import styles from "./style/App.module.css";
+import styles from "./assets/style/App.module.css";
 
 function App() {
   const size = useWindowSize();

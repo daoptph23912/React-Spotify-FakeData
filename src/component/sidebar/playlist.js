@@ -11,7 +11,7 @@ import { PLAYLIST } from "../../data";
 function Playlist() {
   return (
     <div className={styles.Playlist}>
-      <TitleS>Calma Listeleri</TitleS>
+      <TitleS>Nhạc trẻ</TitleS>
 
       <div>
         {PLAYLISTBTN.map((playlist) => {

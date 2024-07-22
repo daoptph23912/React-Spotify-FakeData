@@ -7,7 +7,7 @@ export default {
 
 export const MENU = [
   {
-    title: "Sơn tùng ",
+    title: "Sơn tùng",
     path: "/",
     icon: <Icon.Home />,
     iconSelected: <Icon.HomeActive />,

@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { connect } from "react-redux";
-import { changeTrack } from "../actions";
+import { changeTrack } from "../redux/action";
 import Topnav from "../component/topnav/topnav";
 import TextRegularM from "../component/text/text-regular-m";
 import PlayButton from "../component/buttons/play-button";
@@ -9,8 +9,7 @@ import PlaylistDetails from "../component/playlist/playlist-details";
 import PlaylistTrack from "../component/playlist/playlist-track";
 import * as Icons from "../component/icons";
 import { PLAYLIST } from "../data/index";
-
-import styles from "./playlist.module.css";
+import styles from "../assets/style-pages/playlist.module.css";
 import { useEffect, useState } from "react";
 
 function PlaylistPage(props) {
@@ -24,7 +23,7 @@ function PlaylistPage(props) {
 
   useEffect(() => {
     setIsthisPlay(playlistIndex === props.trackData.trackKey[0]);
-  });
+  }, [playlistIndex, props.trackData.trackKey]);
 
   return (
     <div className={styles.PlaylistPage}>

@@ -3,8 +3,7 @@ import TitleM from "../component/text/title-m";
 import Topnav from "../component/topnav/topnav";
 import PlaylistCardM from "../component/cards/playlist-card-m";
 import { PLAYLIST } from "../data/index";
-
-import styles from "./library.module.css";
+import styles from "../assets/style-pages/library.module.css";
 
 function Library() {
   return (
@@ -31,7 +30,7 @@ function Library() {
 function PlaylistTab() {
   return (
     <div>
-      <TitleM>Calma Listeleri</TitleM>
+      <TitleM>Nhạc trẻ</TitleM>
       <div className={styles.Grid}>
         {PLAYLIST.filter((item) => item.type === "playlist").map((item) => {
           return <PlaylistCardM key={item.title} data={item} />;
@@ -44,7 +43,7 @@ function PlaylistTab() {
 function PodcastTab() {
   return (
     <div>
-      <TitleM>Podcast'ler</TitleM>
+      <TitleM>Nhạc sống</TitleM>
       <div className={styles.Grid}>
         {PLAYLIST.filter((item) => item.type === "podcast").map((item) => {
           return <PlaylistCardM key={item.title} data={item} />;
@@ -57,7 +56,7 @@ function PodcastTab() {
 function ArtistTab() {
   return (
     <div>
-      <TitleM>Sanatçilar</TitleM>
+      <TitleM>Nhạc sàn</TitleM>
     </div>
   );
 }
@@ -65,9 +64,9 @@ function ArtistTab() {
 function AlbumTab() {
   return (
     <div>
-      <TitleM>Albümler</TitleM>
+      <TitleM>Nhạc remix</TitleM>
       <div className={styles.Grid}>
-        {PLAYLIST.filter((item) => item.type === "albüm").map((item) => {
+        {PLAYLIST.filter((item) => item.type === "Remix").map((item) => {
           return <PlaylistCardM key={item.title} data={item} />;
         })}
       </div>

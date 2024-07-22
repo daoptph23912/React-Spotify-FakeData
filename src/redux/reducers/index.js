@@ -1,5 +1,5 @@
-import { PLAYLIST } from "../data/index";
-import { PLAYPAUSE, CHANGETRACK } from "../actions/index";
+import { PLAYLIST } from "../../data/index";
+import { PLAYPAUSE, CHANGETRACK } from "../../redux/action/index";
 
 const INITIAL_STATE = {
   trackData: {
@@ -7,9 +7,9 @@ const INITIAL_STATE = {
     track: `${PLAYLIST[0].playlistData[0].link}`,
     trackName: `${PLAYLIST[0].playlistData[0].songName}`,
     trackImg: `${PLAYLIST[0].playlistData[0].songimg}`,
-    trackArtist: `${PLAYLIST[0].playlistData[0].songArtist}`
+    trackArtist: `${PLAYLIST[0].playlistData[0].songArtist}`,
   },
-  isPlaying: false
+  isPlaying: false,
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -17,7 +17,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
     case PLAYPAUSE:
       return {
         ...state,
-        isPlaying: action.payload
+        isPlaying: action.payload,
       };
     case CHANGETRACK:
       return {
@@ -35,9 +35,10 @@ export const reducer = (state = INITIAL_STATE, action) => {
             PLAYLIST[action.payload[0]].playlistData[action.payload[1]].songimg
           }`,
           trackArtist: `${
-            PLAYLIST[action.payload[0]].playlistData[action.payload[1]].songArtist
-          }`
-        }
+            PLAYLIST[action.payload[0]].playlistData[action.payload[1]]
+              .songArtist
+          }`,
+        },
       };
     default:
       return state;

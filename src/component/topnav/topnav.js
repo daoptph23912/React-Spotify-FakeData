@@ -16,7 +16,7 @@ function Topnav({ search = false, tabButtons = false }) {
           {tabButtons ? <LibraryTabBtn /> : ""}
         </span>
         <span>
-          <button className={styles.ProfileBtn}>Oguzhan Ulukaya</button>
+          <button className={styles.ProfileBtn}>Nhạc của tui</button>
         </span>
       </div>
     </nav>
